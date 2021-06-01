@@ -13,8 +13,21 @@ body {
 .navbar .nav-item {
   font-weight: 600;
 }
+
+.navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
 .navbar .active {
   color: #1553a0 !important;
+}
+
+.navbar .nav-item:hover .nav-link {
+  color: #1553A0;
+}
+
+.navbar .nav-link img {
+  margin-left: 5px;
 }
 
 .navbar .welcome {
@@ -37,12 +50,12 @@ body {
 /* card */
 .login-form .card {
   width: 350px;
-  margin: 3rem auto;
+  margin: 6rem auto;
 }
 
 .login-form .card-title {
   font-size: 25px;
-  margin-bottom: 0;
+  margin-bottom: 5px;
   line-height: 30px;
 }
 
@@ -135,6 +148,13 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: flex-start;
+    justify-content: space-evenly;
+}
+
+.card-information {
+  max-width: 200px;
+  min-width: 100px;
+  cursor: pointer;
 }
 
 .card-information .card-title {
@@ -154,9 +174,22 @@ body {
     word-wrap: break-word;
 }
 
-.card-information img {
-    margin-left: 20px;
-    margin-top: 20px;
+.card-information .card-icon {
+    margin-left: 16px;
+    margin-top: 16px;
+}
+
+.card-information:hover {
+  border: 1px solid #1859A9;
+  border-radius: 4px;
+}
+
+.card-information:hover .card-icon .card-icon-path {
+  fill: #1859A9;
+}
+
+.card-information .card-body {
+  padding: .7rem;
 }
 
 /* font */
@@ -170,12 +203,17 @@ body {
   color: #1553a0;
 }
 
-
-@media screen and (max-width: 1117px){
-  .card-information .card-text {
-    font-size: 13px;
+@media screen and (max-width:1200px) {
+  .mainmenu {
+    margin-left: 50px;
+    margin-right: 50px;
   }
 
+  .card-information .card-text {
+    font-size: 13px;
+  }  
+}
+@media screen and (max-width: 1117px){
   .card-information .card-body {
     padding: .5rem .5rem;
   }
@@ -184,9 +222,26 @@ body {
     margin-left: 10px;
     margin-top: 10px;
   }
+
+  .card-information .card-icon {
+    margin-left: 12px;
+    margin-top: 10px;
+    width: 20px;
+  }
+  
+  .login-form .card {
+    margin: 4rem auto;
+  }
 }
 
 @media screen and (max-width: 991px){
+  .mainmenu {
+    margin: 0;
+  }
+  .mainmenu .row {
+    --bs-gutter-x: 0;
+  }
+
   .navbar-login .navbar-collapse {
     transform: translateX(0);
   }
@@ -211,10 +266,28 @@ body {
     justify-content: space-evenly;
   }
 
+  .card-information {
+    max-width: none;
+  }
+
   .card-information img {
     width: 18px;
   }
+
+  .card-information .card-icon {
+    margin-left: 25px;
+    margin-top: 0;
+    height: 100%;
+  }
 }
+
+@media screen and (max-width: 768px){
+  .card-information .card-icon {
+    margin: 0 auto;
+    display: block;
+    width: 25px;
+  }
+ }
 
 @media screen and (max-width: 576px){ 
   .card-information img {
@@ -222,16 +295,52 @@ body {
     margin-left: 25px;
     margin-top: 15px;
   }
+
+  .login-form .card {
+    margin: 2rem auto;
+  }
+}
+
+@media screen and (max-width: 477px){ 
+  .navbar-menu .welcome {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 425px){ 
   .card-information img {
     margin-left: 15px;
   }
+
+  .login-form .card {
+    width: 300px;
+  }
+
+  .login-form .card-title {
+    font-size: 20px;
+  }
+
+  .carousel-caption-box {
+    margin-bottom: -15px;
+    margin-left: 0;
+  }
+
+  .mainmenu .carousel-indicators {
+    margin-bottom: .5rem;
+    margin-right: 3%;
+  }
 }
 
 @media screen and (max-width: 375px){ 
   .card-information img {
     width: 15px;
+  }
+
+  .carousel-title {
+    font-size: 14px;
+  }
+
+  .carousel-subtitle {
+    font-size: 12px;
   }
 }
