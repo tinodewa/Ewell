@@ -30,6 +30,10 @@ body {
   margin-left: 5px;
 }
 
+.navbar .nav-item .nav-link {
+  color: #354B5A;
+}
+
 .navbar .welcome {
   font-size: 15px;
   line-height: 18.15px;
@@ -45,6 +49,15 @@ body {
 .navbar-menu .navbar-collapse {
   transform: translateX(80px);
   z-index: 5;
+} 
+
+.navbar-light .navbar-toggler {
+  border: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url(
+    "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(21, 83, 160, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 /* card */
@@ -92,15 +105,17 @@ body {
 
 /* Main Menu */
 .mainmenu {
-  margin-top: 30px;
-  margin-bottom: 30px;
-  margin-left: 85px;
-  margin-right: 85px;
+  max-width: 1200px;
+  margin: 30px auto;
 }
 
 /* carousel */
 .mainmenu .main-carousel {
   padding-bottom: 25px;
+}
+
+.mainmenu .carousel-inner {
+  border-radius: .25rem;
 }
 
 .mainmenu .carousel-indicators {
@@ -262,6 +277,10 @@ body {
     order: 4;
   }
 
+  .dropdown-menu {
+    border: none;
+  }
+  
   .main-information {
     justify-content: space-evenly;
   }
@@ -278,6 +297,11 @@ body {
     margin-left: 25px;
     margin-top: 0;
     height: 100%;
+  }
+
+  .mainmenu .carousel-inner {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 }
 
